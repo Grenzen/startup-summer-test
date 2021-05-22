@@ -1,0 +1,9 @@
+.initial-container {
+  background: url('../../assets/icons/search-icon.svg') no-repeat center;
+  background-position-y: 38%;
+  background-size: 10rem;
+}
+
+.initial-text {
+  padding-top: 9rem;
+}
