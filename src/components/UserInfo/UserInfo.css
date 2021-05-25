@@ -1,0 +1,41 @@
+.avatar {
+  width: 100%;
+  max-width: 28rem;
+  border-radius: 50%;
+}
+
+.user-name {
+  margin: 1rem 0;
+  font-weight: 600;
+  font-size: 2.4rem;
+  line-height: 3.4rem;
+}
+
+.user-link {
+  width: 28rem;
+  text-decoration: none;
+  color: #0064EB;
+  font-size: 1.6rem;
+  line-height: 1.17rem;
+}
+
+.follow-container {
+  margin-top: 2.5rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.follow-container > span {
+  display: inherit;
+  align-items: center;
+  font-size: 14px;
+}
+
+.follow-container > span + span {
+  margin-left: 1.6rem;
+}
+
+.follow-icon {
+  width: 2.4rem;
+  margin-right: 0.8rem;
+}

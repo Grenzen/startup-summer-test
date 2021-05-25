@@ -1,16 +1,14 @@
 import React from 'react'
 import { Header } from '../../components/Header/Header'
-import { UserOutlined } from '@ant-design/icons'
-import './NoDataPage.css'
+import { Inform } from '../../components/Inform/Inform'
+import src from '../../assets/icons/user-icon.svg'
+const text = 'User not found'
 
 export const NoDataPage = () => {
   return (
     <>
       <Header />
-      <main className="basic-container no-data-container">
-        <UserOutlined className="no-data-icon" />
-        <p className="basic-text no-data-text">User not found</p>
-      </main>
+      <Inform src={src} text={text} />
     </>
   )
 }

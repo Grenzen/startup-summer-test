@@ -1,0 +1,12 @@
+.example {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 4px;
+}
+
+.loading {
+  font-size: 5rem;
+  color: #0064EB;
+}
