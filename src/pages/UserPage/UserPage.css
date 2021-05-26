@@ -6,16 +6,20 @@
 }
 
 .user-info-container {
-  width: 33.7%;
+  width: 40.7%;
   padding: 4rem;
 }
 
 .user-repos-container {
+  width: 55%;
   height: 91vh;
-  width: 64%;
   padding: 4rem 0;
   padding-right: 2.6rem;
   margin-left: 4.4rem;
+}
+
+.user-repos-container > div.basic-container {
+  height: 55vh;
 }
 
 @media screen and (max-width: 700px) {
