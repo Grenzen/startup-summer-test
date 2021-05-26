@@ -23,7 +23,7 @@ export const Search = () => {
 
   return (
     <div className="search-container">
-      <GithubOutlined className="logo" />
+      <GithubOutlined id="logo" />
       <input
         className="search"
         type="text"

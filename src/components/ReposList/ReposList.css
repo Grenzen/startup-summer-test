@@ -1,0 +1,100 @@
+.repos-list-container {
+  height: 77vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.ant-pagination.repos-list-pagination > li.ant-pagination-options {
+  display: none;
+}
+
+.ant-pagination.repos-list-pagination {
+  margin-right: 1.3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: flex-end;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 370px) {
+  .ant-pagination.repos-list-pagination {
+    margin-right: 0;
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .ant-pagination.repos-list-pagination {
+    align-self: center;
+  }
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-total-text {
+  color: #808080;
+  font-size: 1.4rem;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  min-width: 2.1rem;
+  height: 2.5rem;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-prev >
+.ant-pagination-item-link,
+.ant-pagination.repos-list-pagination >
+.ant-pagination-next >
+.ant-pagination-item-link {
+  color: #808080;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 2.1rem;
+  height: 2.5rem;
+  border: none;
+  background: transparent;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-prev >
+.ant-pagination-item-link:hover,
+.ant-pagination.repos-list-pagination >
+.ant-pagination-next >
+.ant-pagination-item-link:hover {
+  color: #0064EB;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item:hover,
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item:focus-visible {
+  background-color: #0064EB;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item:hover > a,
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item:focus-visible > a {
+  color: #FFF;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item.ant-pagination-item-active {
+  background-color: #0064EB;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item.ant-pagination-item-active > a {
+  color: #FFF;
+}
+
+.ant-pagination.repos-list-pagination >
+.ant-pagination-item > a {
+  color: #808080;
+}

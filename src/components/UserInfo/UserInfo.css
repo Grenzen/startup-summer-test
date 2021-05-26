@@ -27,8 +27,8 @@
 
 .follow-container > span {
   display: inherit;
-  align-items: center;
-  font-size: 14px;
+  align-items: start;
+  font-size: 1.5rem;
 }
 
 .follow-container > span + span {
@@ -36,6 +36,29 @@
 }
 
 .follow-icon {
-  width: 2.4rem;
   margin-right: 0.8rem;
+}
+
+.follow-icon > svg {
+  width: 2.4rem;
+}
+
+@media screen and (max-width: 700px) {
+}
+
+@media screen and (min-width: 700px) and (max-width: 783px) {
+  .follow-icon > svg {
+    width: 2rem;
+  }
+
+  .follow-container > span {
+    align-items: end;
+    font-size: 1.3rem;
+  }
+}
+
+@media screen and (min-width: 784px) and (max-width: 836px) {
+  .avatar {
+    width: 80%;
+  }
 }

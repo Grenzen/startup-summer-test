@@ -6,7 +6,7 @@
   align-items: center;
 }
 
-.logo {
+#logo {
   color: #FFF;
   font-size: 4rem;
   margin: 0 2.2rem;
@@ -17,6 +17,7 @@
   width: 41.7%;
   padding: 0 4.4rem;
   max-width: 50rem;
+  min-width: 25rem;
   border-radius: 0.7rem;
   border: none;
   outline: none;
@@ -29,5 +30,15 @@
 @media screen and (min-width: 1300px) {
   .search-container {
     margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .search {
+    min-width: 21rem;
+  }
+
+  .search-container {
+    padding: 1.6rem 1rem;
   }
 }

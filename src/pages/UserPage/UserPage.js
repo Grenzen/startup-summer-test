@@ -8,17 +8,19 @@ import './UserPage.css'
 
 
 export const UserPage = () => {
-  const { ready } = useUser()
+  const { readyUser, readyRepos } = useUser()
+  console.log(`readyRepos ${readyRepos}`)
+  console.log(`readyUser ${readyUser}`)
 
   return (
     <>
       <Header />
       <main className="user-container">
         <section className="user-info-container">
-          { ready ? <UserInfo /> : <Loader />  }
+          { readyUser ? <UserInfo /> : <Loader />  }
         </section>
         <section className="user-repos-container">
-          { ready ? <UserRepos /> : <Loader /> }
+          { readyRepos ? <UserRepos /> : <Loader /> }
         </section>
       </main>
     </>
