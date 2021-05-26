@@ -1,0 +1,44 @@
+.search-container {
+  max-width: 130rem;
+  padding: 1.6rem 1.8rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+#logo {
+  color: #FFF;
+  font-size: 4rem;
+  margin: 0 2.2rem;
+}
+
+.search {
+  height: 4rem;
+  width: 41.7%;
+  padding: 0 4.4rem;
+  max-width: 50rem;
+  min-width: 25rem;
+  border-radius: 0.7rem;
+  border: none;
+  outline: none;
+  font-size: 1.4rem;
+  background: #FFF url('../../assets/icons/search-icon.svg') no-repeat left;
+  background-position-x: 1rem;
+  background-size: 2.4rem;
+}
+
+@media screen and (min-width: 1300px) {
+  .search-container {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  .search {
+    min-width: 21rem;
+  }
+
+  .search-container {
+    padding: 1.6rem 1rem;
+  }
+}

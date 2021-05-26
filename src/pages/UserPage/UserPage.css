@@ -1,0 +1,67 @@
+.user-container {
+  margin: 0 auto;
+  max-width: 125rem;
+  display: flex;
+  flex-direction: row;
+}
+
+.user-info-container {
+  width: 40.7%;
+  padding: 4rem;
+}
+
+.user-repos-container {
+  width: 55%;
+  height: 91vh;
+  padding: 4rem 0;
+  padding-right: 2.6rem;
+  margin-left: 4.4rem;
+}
+
+.user-repos-container > div.basic-container {
+  height: 55vh;
+}
+
+@media screen and (max-width: 700px) {
+
+  .avatar {
+    width: 100%;
+  }
+
+  .user-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .user-info-container {
+    padding: 4rem;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-repos-container {
+    margin-left: 0;
+    padding: 1rem 2.6rem;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 701px) and (max-width: 836px) {
+  .user-info-container {
+    padding: 4rem 1rem;
+  }
+}
+
+@media screen and (min-width: 837px) and (max-width: 962px) {
+  .user-info-container {
+    width: 33.7%;
+    padding: 4rem 2rem;
+  }
+
+  .user-repos-container {
+    width: 63%;
+    margin-left: 3.6rem;
+  }
+}

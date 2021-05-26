@@ -1,1 +1,30 @@
+@import "~normalize.css";
+@import "~antd/dist/antd.css";
+@import url('https://fonts.googleapis.com/css2?family=Inter&display=swap');
 
+html {
+  font-size: 10px;
+}
+
+body {
+  background-color: #F9F9F9;
+  font-family: 'Inter', sans-serif;
+}
+
+.basic-container {
+  height: 87vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.basic-text {
+  margin: 0;
+  max-width: 25rem;
+  font-size: 2.2rem;
+  text-align: center;
+  line-height: 3rem;
+  padding-top: 2.4rem;
+  color: #808080;
+}
