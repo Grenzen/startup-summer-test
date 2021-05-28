@@ -1,7 +1,6 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
 import { Inform } from '../Inform/Inform'
-import { NoDataPage } from '../../pages/NoDataPage/NoDataPage'
 import { ReposList } from '../ReposList/ReposList'
 import { constants } from '../../constants/constants'
 import './UserRepos.css'
@@ -11,9 +10,6 @@ const text = constants.empty.text
 
 export const UserRepos = () => {
   const user = useContext(UserContext)
-
-  if (!user.user) return <NoDataPage />
-
 
   if (!user.repos.length) {
     return <Inform className="repos-inform" src={src} text={text} />

@@ -1,24 +1,21 @@
 import React, { useContext } from 'react'
 import { UserContext } from '../../context/UserContext'
-import { ReactSVG } from 'react-svg'
-import { NoDataPage } from '../../pages/NoDataPage/NoDataPage'
+import { Follow } from '../Follow/Follow'
+import { Members } from '../Members/Members'
+
 import { calculate } from '../../calculate/calculate'
 
 import './UserInfo.css'
-import followersSrc from '../../assets/icons/followers-icon.svg'
-import followingSrc from '../../assets/icons/following-icon.svg'
 
 export const UserInfo = () => {
   const user = useContext(UserContext)
-
-
-  if (!user.user) return <NoDataPage />
 
   const {
     avatar_url,
     html_url,
     login,
     name,
+    type,
     followers,
     following
   } = user.user
@@ -40,12 +37,10 @@ export const UserInfo = () => {
         { login }
       </a>
       <div className="follow-container">
-        <span>
-          <ReactSVG className="follow-icon" src={followersSrc} /> {calculate(followers)} followers
-        </span>
-        <span>
-          <ReactSVG className="follow-icon" src={followingSrc} /> {calculate(following)} following
-        </span>
+        { type === 'User' ?
+          <Follow followers={calculate(followers)} following={calculate(following)} /> :
+          <Members members={calculate(user.user.members)} />
+        }
       </div>
     </div>
   )
