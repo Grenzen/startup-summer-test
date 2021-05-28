@@ -32,6 +32,7 @@ export const useUser = () => {
 
 
   const findUser = useCallback(async (userLogin) => {
+    clearUser()
     if (typeof userLogin === 'string' && userLogin.length) {
       try {
         const res = await getUser(userLogin)

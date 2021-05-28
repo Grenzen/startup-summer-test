@@ -10,6 +10,7 @@ import './UserPage.css'
 export const UserPage = () => {
   const data = useContext(UserContext)
   const { user, repos } = data
+  console.log(user, repos)
 
   return (
     <>
