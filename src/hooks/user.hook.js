@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from 'react'
-import { getUser, getRepos } from '../api/api'
+import { getUser, getRepos, getOrganizationMembers } from '../api/api'
 
 export const useUser = () => {
   const [user, setUser] = useState(null)
@@ -32,10 +32,15 @@ export const useUser = () => {
 
 
   const findUser = useCallback(async (userLogin) => {
+    clearUser()
     if (typeof userLogin === 'string' && userLogin.length) {
       try {
         const res = await getUser(userLogin)
         const repos = await findRepos(res.data.login)
+        if (res.data.type === 'Organization') {
+          const members = await getOrganizationMembers(userLogin,  1, [])
+          res.data.members = members
+        }
         localStorage.setItem('userData', JSON.stringify(res.data))
         defineUser(res.data, repos)
         return res.data

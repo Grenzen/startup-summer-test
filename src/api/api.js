@@ -4,6 +4,19 @@ export const getUser = user => {
   return axios.get(`https://api.github.com/users/${user}`)
 }
 
+export const getOrganizationMembers = async (organization, counter, midArr) => {
+  try {
+    const res = await getAllMembers(organization, counter)
+    if (res.data.length) {
+      counter++
+      midArr = midArr.concat(res.data)
+      return await getOrganizationMembers(organization, counter, midArr)
+    } else {
+      return midArr.length
+    }
+  } catch (e) {}
+}
+
 export const getRepos = async (user, counter, midArr) => {
   try {
     const res = await getAllRepos(user, counter)
@@ -16,6 +29,11 @@ export const getRepos = async (user, counter, midArr) => {
       return midArr
     }
   } catch (e) {}
+}
+
+const getAllMembers = async (organization, counter) => {
+  const res = await axios.get(`https://api.github.com/orgs/${organization}/members?per_page=100;page=${counter}`)
+  return res
 }
 
 const getAllRepos = async (user, counter) => {
